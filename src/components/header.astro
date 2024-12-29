@@ -1,0 +1,41 @@
+---
+import { Navbar, Dropdown } from 'flowbite-react';
+---
+
+<header>
+  <Navbar fluid={true} rounded={true}>
+    <Navbar.Brand href="/">
+      <img
+        src="/logo.svg"
+        class="h-8 mr-3"
+        alt="Logo"
+      />
+      <span class="self-center whitespace-nowrap text-xl font-semibold dark:text-white">
+        Mi Página
+      </span>
+    </Navbar.Brand>
+    <Navbar.Toggle />
+    <Navbar.Collapse>
+      <Navbar.Link href="/" active={true}>
+        Inicio
+      </Navbar.Link>
+      <Navbar.Link href="/about">
+        Nosotros
+      </Navbar.Link>
+      <Navbar.Link href="/services">
+        Servicios
+      </Navbar.Link>
+      <Navbar.Link href="/contact">
+        Contacto
+      </Navbar.Link>
+      <Dropdown label="Idioma" inline={true}>
+        <Dropdown.Item>
+          Español
+        </Dropdown.Item>
+        <Dropdown.Item>
+          Inglés
+        </Dropdown.Item>
+      </Dropdown>
+    </Navbar.Collapse>
+  </Navbar>
+</header>
