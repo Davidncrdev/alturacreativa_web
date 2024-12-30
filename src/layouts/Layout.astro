@@ -1,5 +1,4 @@
 ---
-
 ---
 
 <!doctype html>
@@ -9,11 +8,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
-    <title>Astro Basics</title>
+    <title>Altura creativa</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.css" />
   </head>
-  <body class="antialiased bg-gray-50 text-gray-900">
-    
+  <body class="antialiased bg-gray-50 text-gray-900 custom-bg">
+   
     <main>
       <slot />
     </main>
@@ -34,5 +33,11 @@
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+  }
+
+  .custom-bg {
+    background: url('/path/to/pattern.svg') repeat;
+    background-size: 200px 200px;
+    background-color: #f9f9f9;
   }
 </style>
