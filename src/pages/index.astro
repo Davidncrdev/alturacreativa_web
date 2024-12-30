@@ -1,14 +1,40 @@
 ---
-import Header from '../components/header.astro';
 import Hero from '../components/Hero.astro';
+import Timeline from '../components/Timeline.astro';
+import Caracteristicas from '../components/Caracteristicas.astro';
+import CTA from '../components/CTA.astro';
+import Footer from '../components/Footer.astro';
 import Layout from '../layouts/Layout.astro';
+import Carousel from '../components/Carousel.astro';
+import Logos from '../components/logos.astro';
+import Sobrenosotros from '../components/Sobrenosotros.astro';
 ---
 
 <Layout>
-	<header>
-		<Header />
-	</header>
-	<div>
-		<Hero />
-	</div>
+  <main class="bg-white-50">
+    <section class="py-16 bg-gradient-to-b from-white-100 to-white-200">
+      <Hero />
+    </section>
+    <section>
+      <Logos />
+    </section>
+    <section>
+      <Sobrenosotros />
+    </section>
+    <section class="py-16 bg-white">
+      <Carousel />
+    </section>
+    <section class="py-16 bg-gray-50">
+      <Caracteristicas />
+    </section>
+    <section class="py-16 bg-white">
+      <Timeline />
+    </section>
+    <section class="py-16 bg-gradient-to-b from-white-200 to-white-300">
+      <CTA />
+    </section>
+  </main>
+  <footer class="py-8 bg-white-900 text-white">
+    <Footer />
+  </footer>
 </Layout>
