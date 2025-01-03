@@ -3,16 +3,63 @@ import Navbar from "../components/Navbar.astro";
 import Layout from "../layouts/Layout.astro";
 import App from "../components/App.astro";
 import Card from "../components/Card.astro";
-
+import Banner1 from "../components/Banner1.astro";
+import Hero3 from "../components/Hero3.astro";
+import Footer from "../components/Footer.astro";
+import CTA2 from "../components/CTA2.astro";
 ---
-<section>
-    <Navbar />
-</section>
 
-<section>
-    <Card />
-</section>
+<!-- Metaetiquetas para SEO -->
+<head>
+  <title>Servicios de Marketing Digital - Optimiza tu Negocio</title>
+  <meta name="description" content="Transforma tu negocio con nuestros servicios de marketing digital. SEO, PPC y diseño web personalizado para mejorar tu presencia online." />
+  <meta name="keywords" content="Marketing digital, SEO, PPC, diseño web, servicios online, optimización web, marketing online, agencia digital" />
+  <meta name="robots" content="index, follow" />
+  <meta property="og:title" content="Servicios de Marketing Digital - Optimiza tu Negocio" />
+  <meta property="og:description" content="Transforma tu negocio con nuestros servicios de marketing digital. SEO, PPC y diseño web personalizado para mejorar tu presencia online." />
+  <meta property="og:image" content="url_de_tu_imagen_de_portada.jpg" />
+  <meta property="og:url" content="https://www.tusitioweb.com/servicios" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Servicios de Marketing Digital - Optimiza tu Negocio" />
+  <meta name="twitter:description" content="Transforma tu negocio con nuestros servicios de marketing digital. SEO, PPC y diseño web personalizado para mejorar tu presencia online." />
+  <meta name="twitter:image" content="url_de_tu_imagen_de_portada.jpg" />
+</head>
+<Layout title="Servicios de Marketing Digital">
+    <main>
 
-<Layout title="servicios">
-    <App />
-  
+        <!-- Sección de navegación -->
+        <section aria-label="Navegación principal">
+          <Navbar />
+        </section>
+      
+        <!-- Sección de Hero con llamada a la acción destacada -->
+        <section aria-label="Hero principal con llamada a la acción">
+          <Hero3 />
+        </section>
+      
+        <!-- Sección de CTA (llamada a la acción) destacada -->
+        <section aria-label="Llamada a la acción para servicios">
+          <CTA2 />
+        </section>
+      
+        <!-- Sección de banner promocional -->
+        <section aria-label="Banner promocional con información adicional">
+          <Banner1 />
+        </section>
+      
+        <!-- Sección de tarjetas para mostrar servicios -->
+        <section aria-label="Servicios disponibles">
+          <Card />
+        </section>
+       <App />
+        <!-- Sección de servicios detallados -->
+        
+         
+        </Layout>
+      
+        <!-- Sección de pie de página -->
+        <Footer />
+      
+      </main>
+      
+</Layout>
