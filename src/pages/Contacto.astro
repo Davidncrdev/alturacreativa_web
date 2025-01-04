@@ -1,0 +1,48 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Navbar from "../components/Navbar.astro";
+import Footer from "../components/Footer.astro";
+import Contact from "../components/contact.astro";
+---
+<meta charset="UTF-8">
+
+
+    <!-- Metaetiquetas para SEO -->
+    <head>
+        <title>Contáctanos | [Nombre de la Empresa]</title>
+        <meta name="description" content="Ponte en contacto con nosotros para recibir servicios personalizados de marketing digital y diseño web. ¡Hacemos crecer tu negocio en línea!">
+        <meta name="keywords" content="contacto, marketing digital, diseño web, soluciones digitales, agencia de marketing">
+        <meta name="robots" content="index, follow">
+        <link rel="canonical" href="https://tu-dominio.com/contacto">
+        <!-- Datos estructurados JSON-LD -->
+        <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "ContactPage",
+          "mainEntity": {
+            "@type": "Organization",
+            "name": "[Nombre de la Empresa]",
+            "url": "https://tu-dominio.com",
+            "sameAs": [
+              "https://facebook.com/tuempresa",
+              "https://instagram.com/tuempresa"
+            ],
+            "contactPoint": {
+              "@type": "ContactPoint",
+              "telephone": "+34-XXX-XXX-XXX",
+              "contactType": "customer service",
+              "areaServed": "España",
+              "availableLanguage": ["Spanish", "English"]
+            }
+          }
+        }
+        </script>
+    </head>
+<Layout>
+    <!-- Contenido de la página -->
+    <Navbar />
+    <main>
+        <Contact />
+    </main>
+    <Footer />
+</Layout>

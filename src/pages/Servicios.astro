@@ -6,65 +6,92 @@ import Card from "../components/Card.astro";
 import Banner1 from "../components/Banner1.astro";
 import Hero3 from "../components/Hero3.astro";
 import Footer from "../components/Footer.astro";
-
 import CTA from "../components/CTA.astro";
 ---
 <meta charset="UTF-8">
 
-<!-- Metaetiquetas para SEO -->
-<head>
-  <title>Servicios de Marketing Digital - Optimiza tu Negocio</title>
-  <meta name="description" content="Transforma tu negocio con nuestros servicios de marketing digital. SEO, PPC y diseño web personalizado para mejorar tu presencia online." />
-  <meta name="keywords" content="Marketing digital, SEO, PPC, diseño web, servicios online, optimización web, marketing online, agencia digital" />
-  <meta name="robots" content="index, follow" />
-  <meta property="og:title" content="Servicios de Marketing Digital - Optimiza tu Negocio" />
-  <meta property="og:description" content="Transforma tu negocio con nuestros servicios de marketing digital. SEO, PPC y diseño web personalizado para mejorar tu presencia online." />
-  <meta property="og:image" content="url_de_tu_imagen_de_portada.jpg" />
-  <meta property="og:url" content="https://www.tusitioweb.com/servicios" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Servicios de Marketing Digital - Optimiza tu Negocio" />
-  <meta name="twitter:description" content="Transforma tu negocio con nuestros servicios de marketing digital. SEO, PPC y diseño web personalizado para mejorar tu presencia online." />
-  <meta name="twitter:image" content="url_de_tu_imagen_de_portada.jpg" />
-</head>
-<Layout title="Servicios de Marketing Digital">
-    <main>
 
+  <!-- Metaetiquetas optimizadas -->
+  <head>
+    <title>Servicios de Marketing Digital - Haz Crecer tu Negocio Online</title>
+    <meta name="description" content="Explora nuestros servicios de marketing digital: SEO, diseño web, PPC, y estrategias personalizadas para mejorar tu presencia en línea y aumentar tus ventas." />
+    <meta name="keywords" content="marketing digital, diseño web, SEO, publicidad PPC, agencia de marketing, soluciones digitales" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://www.tusitioweb.com/servicios" />
+    
+    <!-- Open Graph para redes sociales -->
+    <meta property="og:title" content="Servicios de Marketing Digital - Impulsa tu Presencia Online" />
+    <meta property="og:description" content="Optimiza tu negocio con SEO, diseño web, PPC y estrategias de marketing personalizadas." />
+    <meta property="og:image" content="https://www.tusitioweb.com/imagenes/servicios-cover.jpg" />
+    <meta property="og:url" content="https://www.tusitioweb.com/servicios" />
 
-        <!-- Sección de navegación -->
-        <section aria-label="Navegación principal">
-          <Navbar />
-        </section>
-      
-
-      <section>
-        <CTA />
-      </section>
-
-      
-        <!-- Sección de Hero con llamada a la acción destacada -->
-        <section aria-label="Hero principal con llamada a la acción">
-          <Hero3 />
-        </section>
-      
-        
-        <!-- Sección de banner promocional -->
-        <section aria-label="Banner promocional con información adicional">
-          <Banner1 />
-        </section>
-      
-        <!-- Sección de tarjetas para mostrar servicios -->
-        <section aria-label="Servicios disponibles">
-          <Card />
-        </section>
-       <App />
-        <!-- Sección de servicios detallados -->
-        
-         
-        </Layout>
-      
-        <!-- Sección de pie de página -->
-        <Footer />
-      
-      </main>
-      
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Servicios de Marketing Digital - Impulsa tu Presencia Online" />
+    <meta name="twitter:description" content="Transforma tu negocio con SEO, diseño web, y publicidad PPC para mejorar tu alcance en línea." />
+    <meta name="twitter:image" content="https://www.tusitioweb.com/imagenes/servicios-cover.jpg" />
+    
+    <!-- Datos estructurados JSON-LD -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "serviceType": "Marketing Digital y Diseño Web",
+      "provider": {
+        "@type": "Organization",
+        "name": "[Nombre de la Empresa]",
+        "url": "https://www.tusitioweb.com",
+        "logo": "https://www.tusitioweb.com/logo.png"
+      },
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Servicios de Marketing Digital",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "SEO (Optimización para Motores de Búsqueda)"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Diseño Web Personalizado"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Publicidad de Pago por Clic (PPC)"
+            }
+          }
+        ]
+      }
+    }
+    </script>
+  </head>
+  <Layout title="Servicios de Marketing Digital - SEO, Diseño Web y más">
+  <!-- Contenido principal -->
+  <main>
+    <section aria-label="Navegación principal">
+      <Navbar />
+    </section>
+    <section>
+      <CTA />
+    </section>
+    <section aria-label="Hero principal con llamada a la acción">
+      <Hero3 />
+    </section>
+    <section aria-label="Banner promocional">
+      <Banner1 />
+    </section>
+    <section aria-label="Tarjetas de servicios">
+      <Card />
+    </section>
+    <App />
+    <Footer />
+  </main>
 </Layout>
