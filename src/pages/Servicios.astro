@@ -6,8 +6,10 @@ import Card from "../components/Card.astro";
 import Banner1 from "../components/Banner1.astro";
 import Hero3 from "../components/Hero3.astro";
 import Footer from "../components/Footer.astro";
-import CTA2 from "../components/CTA2.astro";
+
+import CTA from "../components/CTA.astro";
 ---
+<meta charset="UTF-8">
 
 <!-- Metaetiquetas para SEO -->
 <head>
@@ -27,21 +29,24 @@ import CTA2 from "../components/CTA2.astro";
 <Layout title="Servicios de Marketing Digital">
     <main>
 
+
         <!-- Sección de navegación -->
         <section aria-label="Navegación principal">
           <Navbar />
         </section>
+      
+
+      <section>
+        <CTA />
+      </section>
+
       
         <!-- Sección de Hero con llamada a la acción destacada -->
         <section aria-label="Hero principal con llamada a la acción">
           <Hero3 />
         </section>
       
-        <!-- Sección de CTA (llamada a la acción) destacada -->
-        <section aria-label="Llamada a la acción para servicios">
-          <CTA2 />
-        </section>
-      
+        
         <!-- Sección de banner promocional -->
         <section aria-label="Banner promocional con información adicional">
           <Banner1 />
