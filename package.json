@@ -18,6 +18,8 @@
     "cobe": "^0.6.3",
     "flowbite": "^2.5.2",
     "flowbite-react": "^0.10.2",
+    "framer-motion": "^12.6.2",
+    "gsap": "^3.12.7",
     "tailwindcss": "^3.4.17"
   },
   "devDependencies": {

@@ -1,0 +1,44 @@
+<section class="relative py-24 px-6 lg:px-8 bg-transparent text-white"> <!-- Fondo negro aplicado -->
+  <div class="mx-auto max-w-3xl text-center">
+    <h2 class="text-4xl font-bold tracking-tight sm:text-5xl text-gray-200 fade-in opacity-0 translate-y-10 transition-all duration-1000">
+      Nuestros Servicios
+    </h2>
+    <p class="mt-6 text-lg font-medium sm:text-xl text-gray-500 fade-in opacity-0 translate-y-10 transition-all duration-1000">
+      Ofrecemos soluciones integrales para eventos, desde la planificación hasta la ejecución, con un equipo experto en sonido, iluminación y producción audiovisual.
+    </p>
+  </div>
+
+  <div class="mt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
+    <div class="p-6 rounded-xl bg-gray-950 ring-1 ring-gray-600 hover:ring-gray-600 transition-all duration-300 fade-in opacity-0 translate-y-10">
+      <h3 class="text-xl font-semibold text-gray-300">Sonido en Vivo</h3>
+      <p class="mt-2 text-gray-500">Equipos de última generación para garantizar la mejor calidad de sonido en tus eventos.</p>
+    </div>
+    <div class="p-6 rounded-xl bg-gray-950 ring-1 ring-gray-600 hover:ring-gray-600 transition-all duration-300 fade-in opacity-0 translate-y-10">
+      <h3 class="text-xl font-semibold text-gray-300">Iluminación</h3>
+      <p class="mt-2 text-gray-500">Diseño y montaje de iluminación profesional para crear la atmósfera perfecta.</p>
+    </div>
+    <div class="p-6 rounded-xl bg-gray-950 ring-1 ring-gray-600 hover:ring-gray-600 transition-all duration-300 fade-in opacity-0 translate-y-10">
+      <h3 class="text-xl font-semibold text-gray-300">Producción Audiovisual</h3>
+      <p class="mt-2 text-gray-500">Captura y retransmisión en vivo con la mejor calidad de imagen y sonido.</p>
+    </div>
+  </div>
+</section>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const elements = document.querySelectorAll(".fade-in");
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("opacity-100", "translate-y-0");
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+
+    elements.forEach((el) => observer.observe(el));
+  });
+</script>

@@ -5,61 +5,55 @@ import Caracteristicas from '../components/Caracteristicas.astro';
 import CTA from '../components/CTA.astro';
 import Footer from '../components/Footer.astro';
 import Layout from '../layouts/Layout.astro';
-import Carousel from '../components/Carousel.astro';
-import Logos from '../components/logos.astro';
+import Servicios1 from '../components/Servicios1.astro';
 import Navbar from '../components/Navbar.astro';
+import Grid from '../components/Grid.astro';
 ---
 <meta charset="UTF-8">
 
-
   <!-- Metaetiquetas y datos estructurados -->
   <head>
-    <title>Altura creativa | Soluciones de Marketing Digital y Diseño Web</title>
-    <meta name="description" content="Agencia de marketing digital y diseño web para hacer crecer tu negocio. Ofrecemos soluciones personalizadas para aumentar tu presencia online y tus ventas.">
-    <meta name="keywords" content="marketing digital, diseño web, agencia de marketing, desarrollo web, soluciones digitales">
+    <title>Altura creativa | Servicio integral para eventos</title>
+    <meta name="description" content="Alquiler de equipo para eventos - servicios de sonorizacion - servicios de streaming.">
+    <meta name="keywords" content="sonido en vivo, alquiler de equipos, backline, guitarras, bajos, mesa de mezclas, málaga, servicio para conferencias, conferencias, streaming de evento">
     <meta name="robots" content="index, follow">
-    <link rel="canonical" href="https://tu-dominio.com">
+    <link rel="canonical" href="https://alturacreativa.com">
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "WebPage",
-      "name": "Altura creativa | Marketing Digital y Diseño Web",
-      "description": "Especialistas en marketing digital y diseño web. Impulsamos tu presencia digital con estrategias personalizadas.",
-      "url": "https://tu-dominio.com",
+      "name": "Altura creativa | Servicio integral para eventos",
+      "description": "Especialistas en sonido en vivo y backline. Impulsamos tu evento con estrategias personalizadas.",
+      "url": "https://alturacreativa.com",
       "publisher": {
         "@type": "Organization",
         "name": "Altura creativa",
         "logo": {
           "@type": "ImageObject",
-          "url": "https://tu-dominio.com/logo.png"
+          "url": "https://alturacreativa/logo.png"
         }
       }
     }
     </script>
   </head>
   <Layout>
+  <body>
+    
+  </body>
   <!-- Contenido de la página -->
   <main class="bg-white-50">
     <Navbar />
-    <section class="py-16 bg-gradient-to-b from-white-100 to-white-200">
-      <Hero />
+    <Hero />
+    <section class="bg-transparent py-16" > 
+      <div>
+         
+      </div>
     </section>
-    <section>
-      <Logos />
-    </section>
-    <section></section>
-    <section class="py-16 bg-white">
-      <Carousel />
-    </section>
-    <section class="py-16 bg-gray-50">
-      <Caracteristicas />
-    </section>
-    <section class="py-16 bg-white">
-      <Timeline />
-    </section>
-    <section class="py-16 bg-gradient-to-b from-white-200 to-white-300">
-      <CTA />
-    </section>
+    <Grid />
+    <Servicios1 />
+    <Caracteristicas />
+    <Timeline />
+    <CTA />
   </main>
   <footer class="py-8 bg-white-900 text-white">
     <Footer />

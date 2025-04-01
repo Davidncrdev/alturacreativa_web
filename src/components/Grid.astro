@@ -1,0 +1,19 @@
+---
+const columns = [
+  { img: "https://cdn.pixabay.com/photo/2016/11/23/15/48/audience-1853662_1280.jpg", title: "Conciertos", description: "Producción y gestión de conciertos en vivo con equipos de alta calidad." },
+  { img: "https://cdn.pixabay.com/photo/2022/06/02/15/01/music-7238254_1280.jpg", title: "Bodas", description: "Creamos bodas inolvidables con una organización impecable." },
+  { img: "https://images.unsplash.com/photo-1531058020387-3be344556be6?q=80&w=3540&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", title: "Eventos Corporativos", description: "Planificación de eventos para empresas, lanzamientos y conferencias." },
+];
+---
+
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6 p-8 text-white">
+  {columns.map((col) => (
+    <div class="relative overflow-hidden rounded-lg shadow-lg group">
+      <img src={col.img} alt={col.title} class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110" />
+      <div class="absolute inset-0 flex flex-col items-center justify-center p-4 text-center transition-opacity duration-500 opacity-0 group-hover:opacity-100 bg-gradient-to-t from-black/70 via-black/40 to-transparent">
+        <h3 class="text-xl font-semibold text-white">{col.title}</h3>
+        <p class="mt-2 text-gray-200">{col.description}</p>
+      </div>
+    </div>
+  ))}
+</div>

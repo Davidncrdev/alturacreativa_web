@@ -1,30 +1,83 @@
-<div class="bg-white">
-  <div class="mx-auto max-w-7xl py-24 sm:px-6 sm:py-32 lg:px-8">
-    <div class="relative isolate overflow-hidden bg-gray-900 px-6 pt-16 shadow-2xl sm:rounded-3xl sm:px-16 md:pt-24 lg:flex lg:gap-x-20 lg:px-24 lg:pt-0">
-      <svg viewBox="0 0 1024 1024" class="absolute left-1/2 top-1/2 -z-10 size-[64rem] -translate-y-1/2 [mask-image:radial-gradient(closest-side,white,transparent)] sm:left-full sm:-ml-80 lg:left-1/2 lg:ml-0 lg:-translate-x-1/2 lg:translate-y-0" aria-hidden="true">
-        <circle cx="512" cy="512" r="512" fill="url(#759c1415-0410-454c-8f7c-9a820de03641)" fill-opacity="0.7" />
-        <defs>
-          <radialGradient id="759c1415-0410-454c-8f7c-9a820de03641">
-            <stop stop-color="#7775D6" />
-            <stop offset="1" stop-color="#E935C1" />
-          </radialGradient>
-        </defs>
-      </svg>
-      <div class="mx-auto max-w-md text-center lg:mx-0 lg:flex-auto lg:py-32 lg:text-left">
-        <h2 class="text-balance text-3xl font-semibold tracking-tight text-white sm:text-4xl">Impulsa tu productividad. Comienza a usar nuestra app hoy.</h2>
-        <p class="mt-6 text-pretty text-lg/8 text-gray-300">Conéctate con nosotros para obtener más información sobre cómo podemos ayudarte a alcanzar tus objetivos.</p>
-        <div class="mt-10 flex items-center justify-center gap-x-6 lg:justify-start">
-          <!-- Botón para llamar -->
-          <a href="tel:+34641437667" class="rounded-md bg-white px-3.5 py-2.5 text-sm font-semibold text-gray-900 shadow-sm hover:bg-gray-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white">
-            Llamar ahora
-          </a>
-          <!-- Enlace para más información -->
-          <a href="#" class="text-sm/6 font-semibold text-white">Más información <span aria-hidden="true">→</span></a>
-        </div>
+<section class="relative bg-transparent py-24 sm:py-32">
+  <div class="mx-auto max-w-7xl px-6 lg:px-8 text-center">
+    <div class="relative bg-gray-950 px-10 py-16 shadow-2xl ring-1 ring-gray-800 rounded-3xl opacity-0 translate-y-6 transition-all duration-1000 fade-in">
+      
+      <!-- Contenido de texto -->
+      <h2 class="text-4xl font-semibold text-white sm:text-5xl leading-tight">
+        Haz que tu evento sea inolvidable.
+      </h2>
+      <p class="mt-6 text-lg text-gray-400 leading-relaxed">
+        Deja que nuestros expertos se encarguen de cada detalle, desde sonido hasta videografía. ¡Transforma tu evento con nosotros!
+      </p>
+      
+      <!-- Botones -->
+      <div class="mt-10 flex flex-col sm:flex-row items-center justify-center gap-6">
+        <!-- Botón de llamada -->
+        <a href="tel:+34641437667" class="cta-button">
+          📞 ¡Llama ahora!
+        </a>
+        <!-- Más información -->
+        <a href="#mas-info" class="text-sm font-semibold text-gray-300 hover:text-indigo-400 hover:underline transition">
+          Más información →
+        </a>
       </div>
-      <div class="relative mt-16 h-80 lg:mt-8">
-        <img class="absolute left-0 top-0 w-[57rem] max-w-none rounded-md bg-white/5 ring-1 ring-white/10" src="https://tailwindui.com/plus/img/component-images/dark-project-app-screenshot.png" alt="Captura de la app" width="1824" height="1080">
-      </div>
+
+      <!-- Glow en el fondo -->
+      <div class="absolute inset-0 bg-gradient-to-r from-transparent via-indigo-900/30 to-transparent rounded-3xl blur-2xl opacity-50 transition-transform duration-500 scale-100 hover:scale-105"></div>
     </div>
   </div>
-</div>
+</section>
+
+<!-- Estilos y animaciones -->
+<style>
+@keyframes fade-in {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.cta-button {
+  display: inline-block;
+  padding: 12px 30px;
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: white;
+  background: linear-gradient(to right, #6366f1, #8b5cf6);
+  border-radius: 8px;
+  box-shadow: 0px 4px 15px rgba(99, 102, 241, 0.4);
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.cta-button:hover {
+  background: linear-gradient(to right, #4f46e5, #6d28d9);
+  box-shadow: 0px 6px 20px rgba(99, 102, 241, 0.6);
+  transform: scale(1.05);
+}
+
+.cta-button:focus {
+  outline: none;
+  box-shadow: 0px 0px 8px rgba(99, 102, 241, 0.7);
+}
+</style>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  // Seleccionar el elemento que debe ser animado
+  const fadeInElement = document.querySelector(".fade-in");
+
+  // Configurar IntersectionObserver para que active la animación cuando entre en la vista
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        // Cuando el elemento entra en la vista, añadir las clases necesarias
+        entry.target.classList.remove("opacity-0", "translate-y-6");
+        entry.target.classList.add("opacity-100", "translate-y-0");
+      }
+    });
+  }, { threshold: 0.3 });
+
+  if (fadeInElement) {
+    observer.observe(fadeInElement);
+  }
+});
+</script>

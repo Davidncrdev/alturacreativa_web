@@ -3,48 +3,34 @@ import Analytics from '@vercel/analytics/astro'
 ---
 
 <!doctype html>
-
-<html lang="en">
-
+<html lang="es">
   <head>
-    
     <Analytics />
     
     <meta charset="UTF-8" />
     <meta name="google-site-verification" content="rcHzNph6ZGKWgUTrvZc3913eeH_v1zsUW4nRi-khces" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <title>Altura Creativa | Producción Audiovisual</title>
+    <meta name="description" content="Producción audiovisual profesional para eventos: sonido, iluminación, videografía y streaming." />
+    
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="generator" content={Astro.generator} />
-    <title>Altura creativa</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.css" />
   </head>
-  <body class="antialiased bg-gray-50 text-gray-900 custom-bg">
-   
-    <main>
+
+  <body class="antialiased text-white bg-gradient-to-b from-black via-gray-900 to-black relative">
+  
+    <main class="flex flex-col min-h-screen relative overflow-hidden">
       <slot />
+  
+      <!-- Fondo con efecto de iluminación sutil -->
+      <div class="absolute inset-0 pointer-events-none">
+        <div class="absolute inset-0 opacity-20 bg-[radial-gradient(ellipse_at_top,rgba(255,255,255,0.1)_0%,rgba(0,0,0,1)_100%)]"></div>
+        <div class="absolute inset-0 opacity-10 bg-[radial-gradient(ellipse_at_bottom,rgba(255,255,255,0.05)_0%,rgba(0,0,0,1)_100%)]"></div>
+      </div>
     </main>
+  
     <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.js" defer></script>
   </body>
+  
 </html>
-
-<style>
-  html,
-  body {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    height: 100%;
-  }
-
-  main {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-  }
-
-  .custom-bg {
-    background: url() repeat;
-    background-size: 200px 200px;
-    background-color: #ffffff;
-  }
-</style>
